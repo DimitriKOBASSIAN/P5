@@ -13,7 +13,7 @@ import ErrorPage from "./Error"
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Remove before take offcd</div>,
+    element: <div>Remove before take off</div>,
     errorElement: <ErrorPage />,
   },
 ]);
