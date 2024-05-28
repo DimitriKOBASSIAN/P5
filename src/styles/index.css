@@ -13,7 +13,6 @@ code {
 }
 
 .main-container {
-  width: 50%;
   max-width: 1440px;
   min-width: 320px;
   padding: 0 50px;
