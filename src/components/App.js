@@ -1,6 +1,7 @@
 
 import '../styles/App.css';
-import NavBar from '../components/NavBar';
+import NavBar from './NavBar';
+import Footer from './Footer';
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
@@ -12,7 +13,7 @@ import ErrorPage from "./Error"
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Remove before take off</div>,
+    element: <div>Remove before take offcd</div>,
     errorElement: <ErrorPage />,
   },
 ]);
@@ -23,6 +24,7 @@ function App() {
     <div className='App'>
       <NavBar />
       <RouterProvider router={router} />
+      <Footer />
     </div>
   );
 }
