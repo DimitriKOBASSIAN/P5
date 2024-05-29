@@ -1,3 +1,5 @@
+$kasa-black: #000000;
+
 .Footer {
     display: flex;
     justify-content: center;
@@ -5,7 +7,7 @@
     flex-direction: column;
     height: 210px;
     width: 100%;
-    background-color: #000000;
+    background-color: $kasa-black;
     font-size: 14px;
     color: #495057;
     text-align: center;

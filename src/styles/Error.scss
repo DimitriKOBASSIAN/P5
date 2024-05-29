@@ -1,5 +1,7 @@
+$kasa-pink: #FF6060;
+
 h1 {
-    color: #FF6060;
+    color: $kasa-pink;
     font-size: 12em;
     text-align: center;
     font-weight: 600;
@@ -7,7 +9,7 @@ h1 {
 }
 
 p {
-    color: #FF6060;
+    color: $kasa-pink;
     font-size: 2em;
     text-align: center;
     font-weight: 500;
