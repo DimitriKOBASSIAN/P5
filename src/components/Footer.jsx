@@ -1,5 +1,5 @@
 import LogoBW from '../assets/LOGO-BW.svg';
-import '../styles/Footer.css';
+import '../styles/Footer.scss';
 
 function Footer() {
     return (
