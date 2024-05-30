@@ -4,7 +4,9 @@ import '../styles/Adhook.scss';
 function Adhook() {
     return (
         <div className='Adhook'>
-            <img src={Coast} alt='Coastal View' className='Coast-img' />
+            <p className='Adhook--title'>
+                Chez vous, <span>partout et ailleurs</span>
+            </p>
         </div>
     );
 }

@@ -4,9 +4,9 @@ import '../styles/NavBar.scss';
 function NavBar() {
 	return (
 		<div className='NavBar'>
-			<img src={logo} alt='Kasa' className='kasa-logo' />
-			<span className='navLinks'>
-				<a className='kasa-nav'>Accueil</a> <a className='kasa-nav'>A propos</a>
+			<img src={logo} className='NavBar--logo' alt='Kasa'/>
+			<span className='NavBar--links'>
+				<a className='NavBar--nav'>Accueil</a> <a className='NavBar--nav'>A Propos</a>
 			</span>
 		</div>
 	);

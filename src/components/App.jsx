@@ -1,8 +1,8 @@
 
 import '../styles/App.scss';
 import NavBar from './NavBar';
-import Footer from './Footer';
 import Adhook from './Adhook';
+import Footer from './Footer';
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {

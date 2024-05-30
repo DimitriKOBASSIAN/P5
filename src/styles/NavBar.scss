@@ -1,33 +1,52 @@
+$kasa-black: #000000;
+$kasa-pink: #FF6060;
+$kasa-font: "Montserrat", sans-serif;
+
 
 .NavBar {
+    width: min(1240px, 80%);
+    height: auto;
+    margin: 45px auto 50px auto;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
-}
-
-.kasa-logo {
-    display: flex;
-    padding: 40px;
-    pointer-events: none;
-    color: black;
-}
-
-.navLinks {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 20px;
     align-items: center;
-}
 
-.kasa-nav {
-    font-family: "Montserrat", sans-serif;
-    display: flex;
-    align-items: flex-end;
-    font-size: 1.5em;
-    font-weight: 500;
-    color: black;
-    width: 120px;
-    padding: 40px;
-}
+    &a {
+        &:active, &:focus {
+            text-decoration: underline;
+            outline: none;
+        }
 
+        &:link, &:visited {
+            color: $kasa-black;
+        }
+        
+        &:hover {
+            color: $kasa-pink;
+        }
+    }
+    &--logo {
+        width: 210px;
+        height: 68px;
+    }
+
+    &--links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &--nav {
+        font-family: $kasa-font;
+        font-size: 16px;
+        display: flex;
+        align-items: flex-end;
+        font-size: 1.5em;
+        font-weight: 500;
+        color: $kasa-black;
+        width: 120px;
+    }
+}
