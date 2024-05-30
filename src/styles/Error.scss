@@ -1,11 +1,12 @@
 $kasa-pink: #FF6060;
+$kasa-font: 'Montserrat', sans-serif;
 
 h1 {
     color: $kasa-pink;
     font-size: 12em;
     text-align: center;
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $kasa-font
 }
 
 p {
@@ -13,5 +14,5 @@ p {
     font-size: 2em;
     text-align: center;
     font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $kasa-font
 }

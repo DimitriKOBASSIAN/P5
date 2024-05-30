@@ -3,10 +3,10 @@ import '../styles/Footer.scss';
 
 function Footer() {
     return (
-        <div className='Footer'>
-            <img src={LogoBW} alt='Kasa' className='kasa-logo-bw' />
+        <div className='footer'>
+            <img src={LogoBW} className='footer--logo' alt='Kasa Logo'/>
             <div className='disclaimer'>
-                <p className='kasa-footer'>© 2024 Kasa. All rights reserved</p>
+                <p className='footer--text'>© 2024 Kasa. All rights reserved</p>
             </div>
         </div>
     );
