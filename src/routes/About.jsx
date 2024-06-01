@@ -1,5 +1,4 @@
-import Adhook from '../components/Adhook';
-import Mountain from '../assets/Mountain.png';
+import Banner from '../components/Banner';
 import '../styles/About.scss';
 
 
@@ -7,7 +6,7 @@ function About () {
   
   return (
     <div>
-      <Adhook isAboutPage />
+      <Banner isAboutPage />
     </div>
   );
 }

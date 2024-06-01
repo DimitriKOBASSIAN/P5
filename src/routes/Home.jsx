@@ -1,9 +1,9 @@
-import Adhook from "../components/Adhook";
+import Banner from "../components/Banner";
 
 function Home() {
     return (
         <div>
-            <Adhook />
+            <Banner />
         </div>
     );
 }
