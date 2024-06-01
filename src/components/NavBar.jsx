@@ -1,15 +1,38 @@
-import logo from '../assets/LOGO.svg';
-import '../styles/NavBar.scss';
+import { NavLink } from "react-router-dom";
+import "../styles/NavBar.scss";
+import logoRed from "../assets/LOGO.svg";
 
-function NavBar() {
-	return (
-		<div className='NavBar'>
-			<img src={logo} className='NavBar--logo' alt='Kasa'/>
-			<span className='NavBar--links'>
-				<a className='NavBar--nav'>Accueil</a> <a className='NavBar--nav'>A Propos</a>
-			</span>
-		</div>
-	);
-}
+const handleNavLinkClick = (event) => {
+	const links = document.querySelectorAll(".NavBar ul li a");
+	links.forEach((link) => {
+		link.classList.remove("NavBar--active");
+	});
+	event.target.classList.add("NavBar--active");
+};
+
+
+const NavBar = () => {
+return (
+<header>
+	<nav className="NavBar">
+	<NavLink to="/" className="Logo">
+		<img src={logoRed} alt="Logo du site Kasa" />
+	</NavLink>
+	<ul>
+		<li>
+		<a href="/">
+			Accueil
+		</a>
+		</li>
+		<li>
+		<a href="/about">
+			A Propos
+		</a>
+		</li>
+	</ul>
+	</nav>
+</header>
+);
+};
 
 export default NavBar;

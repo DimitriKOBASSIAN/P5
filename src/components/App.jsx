@@ -1,33 +1,28 @@
 
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import '../styles/App.scss';
 import NavBar from './NavBar';
-import Adhook from './Adhook';
 import Footer from './Footer';
-import * as React from "react";
-import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
 import ErrorPage from "../routes/Error"
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>Remove before take off</div>,
-    errorElement: <ErrorPage />,
-  },
-]);
+import Home from "../routes/Home"
+import About from "../routes/About"
 
 
-function App() {
+const App = () => {
   return (
-    <div className='App'>
+    <BrowserRouter>
       <NavBar />
-      <Adhook />
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route errorElement={<ErrorPage />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

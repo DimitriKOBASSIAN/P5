@@ -11,42 +11,60 @@ $kasa-font: "Montserrat", sans-serif;
     justify-content: space-between;
     align-items: center;
 
-    &a {
-        &:active, &:focus {
-            text-decoration: underline;
-            outline: none;
-        }
-
-        &:link, &:visited {
-            color: $kasa-black;
-        }
-        
-        &:hover {
-            color: $kasa-pink;
-        }
+    ul {
+        display: inline-block;
+        list-style: none;
     }
+
+    ul li {
+        display: inline-flex;
+        margin-right: 20px;
+    }
+
+
     &--logo {
         width: 210px;
         height: 68px;
     }
 
-    &--links {
-        display: flex;
+    a {
+        display: inline-block;
         flex-direction: row;
         justify-content: space-between;
-        padding: 10px 20px;
         align-items: center;
         gap: 20px;
-    }
-
-    &--nav {
-        font-family: $kasa-font;
+        color: $kasa-black;
         font-size: 16px;
         display: flex;
         align-items: flex-end;
         font-size: 1.5em;
         font-weight: 500;
-        color: $kasa-black;
+        text-decoration: none;
+        
         width: 120px;
+
+        font-family: $kasa-font;
+
+        &:hover {
+            color: $kasa-pink;
+        }
+
+        &.active {
+            text-decoration: underline;
+        }
+    }
+
+    &--nav ul {
+        display: inline-block;
+        gap: 10px;
+    }
+
+    &--nav li {
+        display: flex;
+        align-items: center;
+    }
+
+    &--active {
+        text-decoration: underline;
     }
 }
