@@ -3,13 +3,16 @@ $kasa-black: #000000;
 $kasa-font: 'Montserrat', sans-serif;
 
 #error-page {
+    display: flex;
+    flex-direction: column;
 
 h1 {
     color: $kasa-pink;
     font-size: 288px;
     text-align: center;
     font-weight: 700;
-    font-family: $kasa-font
+    font-family: $kasa-font;
+    margin: 100px 0 0 0;
 }
 
 p {
@@ -17,7 +20,9 @@ p {
     font-size: 36px;
     text-align: center;
     font-weight: 500;
-    font-family: $kasa-font
+    font-family: $kasa-font;
+    margin: 0 0 100px 0;
+    
 }
 
 .links {
@@ -26,6 +31,11 @@ p {
     text-align: center;
     font-weight: 500;
     font-family: $kasa-font
+}
+
+a {
+    color: $kasa-pink;
+    justify-content: center;
 }
 
 }

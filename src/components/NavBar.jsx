@@ -20,14 +20,14 @@ return (
 	</NavLink>
 	<ul>
 		<li>
-		<a href="/">
+		<NavLink to="/" activeClassName="NavBar--active">
 			Accueil
-		</a>
+			</NavLink>
 		</li>
 		<li>
-		<a href="/about">
+		<NavLink to="/about" activeClassName="NavBar--active">
 			A Propos
-		</a>
+			</NavLink>
 		</li>
 	</ul>
 	</nav>

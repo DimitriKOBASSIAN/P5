@@ -1,0 +1,12 @@
+.Adhook.about-page{
+    box-shadow: none;
+
+    &:before {
+        background-image: url('../assets/Mountain.png');
+        filter: brightness(100%);
+    }
+
+    p {
+        display: none;
+    }
+}

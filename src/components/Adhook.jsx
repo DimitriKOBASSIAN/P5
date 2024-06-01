@@ -1,9 +1,11 @@
 import Coast from '../assets/Coast.png';
 import '../styles/Adhook.scss';
 
-function Adhook() {
+function Adhook( { isAboutPage } ) {
+    const className = isAboutPage ? 'Adhook about-page' : 'Adhook';
+    
     return (
-        <div className='Adhook'>
+        <div className={className}>
             <p className='Adhook--title'>
                 Chez vous, <span>partout et ailleurs</span>
             </p>
