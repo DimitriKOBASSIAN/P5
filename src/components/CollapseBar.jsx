@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../styles/CollapseBar.scss";
+import { FaChevronUp } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 
 
 function Collapsebar({ list }) {
@@ -21,7 +23,7 @@ function Collapsebar({ list }) {
                 className="collapse-bar__item__header"
                 onClick={() => handleClick(index)}
             >
-                <h2>{item.title}<span>{activeIndex === index ? "-" : "+"}</span></h2>
+                <h2>{item.title}<span>{activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}</span></h2>
             </div>
             {activeIndex === index && (
                 <div className="collapse-bar__item__content">

@@ -25,4 +25,16 @@ $kasa-font: 'Montserrat', sans-serif;
         width: 80%;
         border-radius: 5px;
     }
+
+    p {
+        display: flex;
+        width: min(1240px, 90%);
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 20px 10px 15px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
 }
