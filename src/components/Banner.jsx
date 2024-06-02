@@ -1,4 +1,3 @@
-import Coast from '../assets/Coast.png';
 import '../styles/Banner.scss';
 
 function Banner( { isAboutPage } ) {

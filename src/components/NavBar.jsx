@@ -2,15 +2,6 @@ import { NavLink } from "react-router-dom";
 import "../styles/NavBar.scss";
 import logoRed from "../assets/LOGO.svg";
 
-const handleNavLinkClick = (event) => {
-	const links = document.querySelectorAll(".NavBar ul li a");
-	links.forEach((link) => {
-		link.classList.remove("NavBar--active");
-	});
-	event.target.classList.add("NavBar--active");
-};
-
-
 const NavBar = () => {
 return (
 <header>
