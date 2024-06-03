@@ -3,18 +3,17 @@ import "../styles/CollapseBar.scss";
 import { FaChevronUp } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 
-
 function Collapsebar({ list }) {
-    const [activeIndex, setActiveIndex] = useState(null);
-    
+    const [activeIndices, setActiveIndices] = useState([]);
+
     const handleClick = (index) => {
-        if (activeIndex === index) {
-        setActiveIndex(null);
+        if (activeIndices.includes(index)) {
+        setActiveIndices(activeIndices.filter((i) => i !== index));
         } else {
-        setActiveIndex(index);
+        setActiveIndices([...activeIndices, index]);
         }
     };
-    
+
     return (
         <div className="collapse-bar">
         {list.map((item, index) => (
@@ -23,9 +22,9 @@ function Collapsebar({ list }) {
                 className="collapse-bar__item__header"
                 onClick={() => handleClick(index)}
             >
-                <h2>{item.title}<span>{activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}</span></h2>
+                <h2>{item.title}<span>{activeIndices.includes(index) ? <FaChevronDown /> : <FaChevronUp />}</span></h2>
             </div>
-            {activeIndex === index && (
+            {activeIndices.includes(index) && (
                 <div className="collapse-bar__item__content">
                 <p>{item.content}</p>
                 </div>
