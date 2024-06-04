@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import HouseData from "../data/logements.json";
+import Collapsebar from "../components/CollapseBar";
+import "../styles/Fiche.scss";
+import Rating from "../components/Rating";
 
 const Fiche = () => {
     const [logement, setLogement] = useState(null);
@@ -21,14 +24,14 @@ const Fiche = () => {
     return (
         <>
         {logement ? (
-            <div key={logement.id}>
-                <img src={logement.cover} alt={logement.title} />
-                <h2>{logement.title}</h2>
-                <p>{logement.location}</p>
+            <div key={logement.id} className="fiche">
+                <img src={logement.cover} alt={logement.title} className="fiche--carrousel"/>
+                <h2 className="fiche--title">{logement.title}</h2>
+                <p className="fiche--location">{logement.location}</p>
                 <p>{logement.description}</p>
-                <img src={logement.host.picture} alt={logement.host.name} />
-                <p>{logement.host.name}</p>
-                <p>{logement.rating}</p>
+                <img src={logement.host.picture} alt={logement.host.name} className="fiche--host-photo" />
+                <p className="fiche--hostname">{logement.host.name}</p>
+                <Rating rating={logement.rating / 5} />
                 
             </div>
         ) : (

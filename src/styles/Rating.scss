@@ -1,0 +1,12 @@
+.star--active, .star--inactive {
+    width: 20px;
+    height: 20px;
+}
+
+.star--active {
+    fill: #FF6060;
+}
+
+.star--inactive {
+    fill: grey;
+}
