@@ -26,13 +26,25 @@ const Fiche = () => {
         {logement ? (
             <div key={logement.id} className="fiche">
                 <img src={logement.cover} alt={logement.title} className="fiche--carrousel"/>
-                <h2 className="fiche--title">{logement.title}</h2>
-                <p className="fiche--location">{logement.location}</p>
+                <div className="fiche--header">
+                    <div className="fiche--geo">
+                    <h2 className="fiche--title">{logement.title}</h2>
+                    <p className="fiche--location">{logement.location}</p>
+                    </div>
+                    <div className="fiche--host">
+                        <img src={logement.host.picture} alt={logement.host.name} className="fiche--host-photo" />
+                        <p className="fiche--hostname">{logement.host.name.split(' ')[0]}<br />{logement.host.name.split(' ')[1]}</p>
+                    </div>
+                            <div className="fiche--tags">
+                                {logement.tags.map((tag, index) => (
+                                <span key={index} className="fiche--tag">{tag}</span>
+                                ))}
+                            </div>
+                            <div className="fiche--rate">
+                                <Rating rating={logement.rating} />
+                            </div>
+                </div>
                 <p>{logement.description}</p>
-                <img src={logement.host.picture} alt={logement.host.name} className="fiche--host-photo" />
-                <p className="fiche--hostname">{logement.host.name}</p>
-                <Rating rating={logement.rating / 5} />
-                
             </div>
         ) : (
             <p>Logement non trouvé</p>

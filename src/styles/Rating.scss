@@ -1,6 +1,7 @@
 .star--active, .star--inactive {
-    width: 20px;
-    height: 20px;
+    width: 36px;
+    height: 36px;
+    padding:  0 6px
 }
 
 .star--active {
@@ -8,5 +9,5 @@
 }
 
 .star--inactive {
-    fill: grey;
+    fill: #E3E3E3;
 }

@@ -1,18 +1,17 @@
-//rating range is 1 to 5
-import star from "../assets/icons/star-solid.svg";
+import { ReactComponent as Star } from "../assets/icons/star-solid.svg";
 import "../styles/Rating.scss";
-
-const range = [1, 2, 3, 4, 5]
+import React from 'react';
 
 function Rating({ rating }) {
-    const roundedRating = Math.round(rating);
+    const stars = Array(5).fill(0);
+
     return (
         <div className="rating">
-        {range.map((el) =>
-            roundedRating >= el ? (
-            <img className="star--active" key={el.toString()} src={star} alt="note" />
+        {stars.map((_, index) =>
+            rating > index ? (
+            <Star className="star--active" key={index} />
             ) : (
-            <img className="star--inactive" key={el.toString()} src={star} alt="note" />
+            <Star className="star--inactive" key={index} />
             )
         )}
         </div>
