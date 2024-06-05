@@ -11,14 +11,14 @@ $kasa-font: 'Montserrat', sans-serif;
     cursor: pointer;
     user-select: none;
     font-family: $kasa-font;
-    width: 100%;
+    width: 45%;
 
     &__item {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 45%;
+        width: 100%;
         color: white;
         font-size: 24px;
         font-weight: 700;
@@ -63,18 +63,11 @@ $kasa-font: 'Montserrat', sans-serif;
         width: min(1240px, 90%);
         color: black;
         font-size: 18px;
-        font-weight: 500;
-        font-size: 18px;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.2;
+        margin: 0;
     }
     
-}
-
-.chevron {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
 }
 
 .rotate {

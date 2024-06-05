@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import HouseData from "../data/logements.json";
-import Collapsebar from "../components/CollapseBar";
+import CollapseBar from "../components/CollapseBar";
 import "../styles/Fiche.scss";
 import Rating from "../components/Rating";
 
@@ -44,12 +44,29 @@ const Fiche = () => {
                                 <Rating rating={logement.rating} />
                             </div>
                 </div>
-                <p>{logement.description}</p>
+                <div className="fiche--infos">
+                <CollapseBar className="fiche--description" list={[{ title: 'Description', content: logement.description }]} />
+                <CollapseBar 
+                    className="fiche--equipements" 
+                    list={[
+                        { 
+                            title: 'Equipements', 
+                            content: (
+                                <ul>
+                                    {logement.equipments.map((equipment, index) => (
+                                        <li key={index}>{equipment}</li>
+                                    ))}
+                                </ul>
+                            ) 
+                        }
+                    ]} 
+                />
+                </div>
             </div>
         ) : (
             <p>Logement non trouvé</p>
         )}
-    </>
+        </>
     );
 };
 

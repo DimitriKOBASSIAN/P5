@@ -9,7 +9,9 @@ function About () {
   return (
     <div>
       <Banner isAboutPage />
+      <div className="about">
       <CollapseBar list={aboutList} />
+      </div>
     </div>
   );
 }
