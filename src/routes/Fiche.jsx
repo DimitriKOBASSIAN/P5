@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import HouseData from "../data/logements.json";
 import CollapseBar from "../components/CollapseBar";
+import Carousel from "../components/Carousel";
 import "../styles/Fiche.scss";
 import Rating from "../components/Rating";
 
@@ -25,7 +26,7 @@ const Fiche = () => {
         <>
         {logement ? (
             <div key={logement.id} className="fiche">
-                <img src={logement.cover} alt={logement.title} className="fiche--carrousel"/>
+                <Carousel className="fiche--carousel" images={logement.pictures} />
                 <div className="fiche--header">
                     <div className="fiche--geo">
                     <h2 className="fiche--title">{logement.title}</h2>
