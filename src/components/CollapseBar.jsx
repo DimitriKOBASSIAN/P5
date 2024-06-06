@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "../styles/CollapseBar.scss";
-import { ReactComponent as ChevronUp } from '../assets/icons/chevron-up-solid.svg';
 import { ReactComponent as ChevronDown } from '../assets/icons/chevron-down-solid.svg';
 
 function Collapsebar({ list }) {
@@ -28,7 +27,7 @@ function Collapsebar({ list }) {
                                 {activeIndices.includes(index) ? (
                                     <ChevronDown className="chevron rotate" />
                                 ) : (
-                                    <ChevronUp className="chevron rotate" />
+                                    <ChevronDown className="chevron " />
                                 )}
                             </span>
                         </h2>
