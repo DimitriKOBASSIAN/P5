@@ -25,9 +25,9 @@ function Collapsebar({ list }) {
                             {item.title}
                             <span style={{ display: 'inline-block', width: '24px', height: '24px' }}>
                                 {activeIndices.includes(index) ? (
-                                    <ChevronDown className="chevron rotate" />
-                                ) : (
                                     <ChevronDown className="chevron " />
+                                ) : (
+                                    <ChevronDown className="chevron rotate" />
                                 )}
                             </span>
                         </h2>

@@ -149,7 +149,17 @@ $white: #ffffff;
     
         ul {
             list-style-type: none;
-            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 0;
+            margin: 0
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: none
         }
 
         p {
