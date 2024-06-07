@@ -15,7 +15,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 0 209px 0;
 }
 
 code {
@@ -26,6 +25,5 @@ code {
 .main-container {
   max-width: 1440px;
   min-width: 320px;
-
   box-sizing: border-box;
 }

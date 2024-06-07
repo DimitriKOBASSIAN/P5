@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import data from "../data/logements.json";
 import Loader from "./Loader";
 import "../styles/Card.scss";
 
 const Card = () => {
-    const navigate = useNavigate();
     const [numCardsToShow, setNumCardsToShow] = useState(6);
 
     const showMoreCards = () => {
@@ -15,6 +14,8 @@ const Card = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    
 
     return (
         <>
@@ -35,19 +36,21 @@ const Card = () => {
                         </Link>
                     </figure>
                 ))}
-                {data.length > numCardsToShow && (
-                    <div className="container_button">
-                        <button
-                            value="Afficher plus de contenu"
-                            onClick={showMoreCards}
-                        >
-                            Afficher plus
-                        </button>
-                    </div>
-                )}
-                </>
+                </> 
             ) : (
                 <Loader />
+            )}
+        </section>
+        <section >
+            {data.length > numCardsToShow && (
+                <div className="container_button">
+                    <button
+                        value="Afficher plus de contenu"
+                        onClick={showMoreCards}
+                    >
+                        Afficher plus
+                    </button>
+                </div>
             )}
         </section>
         </>

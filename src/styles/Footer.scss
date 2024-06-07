@@ -6,16 +6,15 @@ $kasa-white: #FFFFFF;
     height: 209px;
     background-color: $kasa-black;
     color: $kasa-white;
-    bottom: 0;
     left: 0;
-    position: fixed;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 30px;
     padding: 66px 0;
+    margin-top: auto;
 
     &--logo {
         margin-top: 20px;

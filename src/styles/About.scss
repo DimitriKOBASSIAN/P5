@@ -24,16 +24,18 @@ body {
     width: 100%;
     gap: 10px;
     margin-top: 50px;
+    padding: 0 20px;
 
     .collapse-bar__item__content.expanded {
         transform: scaleY(1);
-        background-color: white;
         height: auto;
+        padding-bottom: 10px;
+                margin: 0 0 30px 0;
     }
 
     .collapse-bar__item {
         width: 100%;
-        margin: 0 5px;
+
     }
 }
 
