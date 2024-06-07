@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Loader from "../components/Loader";
 import HouseData from "../data/logements.json";
+import Loader from "../components/Loader";
 import CollapseBar from "../components/CollapseBar";
 import Carousel from "../components/Carousel";
-import "../styles/Fiche.scss";
 import Rating from "../components/Rating";
+import "../styles/Fiche.scss";
+
 
 const Fiche = () => {
     const [logement, setLogement] = useState(null);
@@ -34,7 +35,7 @@ const Fiche = () => {
                     </div>
                     <div className="fiche--host">
                         <img src={logement.host.picture} alt={logement.host.name} className="fiche--host-photo" />
-                        <p className="fiche--hostname">{logement.host.name.split(' ')[0]}<br />{logement.host.name.split(' ')[1]}</p>
+                        <p className="fiche--hostname">{logement.host.name.split(' ')[0]}<br />{logement.host.name?.split(' ')[1]}</p>
                     </div>
                             <div className="fiche--tags">
                                 {logement.tags.map((tag, index) => (

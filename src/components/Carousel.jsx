@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Carousel.scss';
+import { ReactComponent as ChevronLeft } from '../assets/icons/chevron-left-solid.svg';
+import { ReactComponent as ChevronRight } from '../assets/icons/chevron-right-solid.svg';
 
 const Carousel = ({ images }) => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -15,17 +17,17 @@ const Carousel = ({ images }) => {
     };
     return (
         <div className="carousel">
-        <button onClick={prevSlide} className="carousel__btn carousel__btn--prev">
-            &lt;
-        </button>
-        <img
-            src={images[activeIndex]}
-            alt={`Slide ${activeIndex}`}
-            className="carousel__img"
-        />
-        <button onClick={nextSlide} className="carousel__btn carousel__btn--next">
-            &gt;
-        </button>
+            <button onClick={prevSlide} className="carousel__btn carousel__btn--prev">
+                <ChevronLeft className="chevron-carousel" />
+            </button>
+            <img
+                src={images[activeIndex]}
+                alt={`Slide ${activeIndex}`}
+                className="carousel__img"
+            />
+            <button onClick={nextSlide} className="carousel__btn carousel__btn--next">
+                <ChevronRight className="chevron-carousel" />
+            </button>
         </div>
     );
 };

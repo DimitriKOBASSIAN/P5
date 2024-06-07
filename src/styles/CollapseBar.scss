@@ -1,6 +1,7 @@
 $kasa-pink: #FF6060;
 $kasa-black: #000000;
 $kasa-font: 'Montserrat', sans-serif;
+$dark: #f6f6f6;
 
 .collapse-bar {
     display: flex;
@@ -37,7 +38,6 @@ $kasa-font: 'Montserrat', sans-serif;
         font-weight: 700;
         padding: 10px 20px 10px 15px;
         border-radius: 5px;
-        margin-bottom: 10px;
     }
 
     &__item__content {
@@ -84,4 +84,22 @@ $kasa-font: 'Montserrat', sans-serif;
 
 .rotate {
     transform: rotate(180deg);
+}
+
+.collapse-bar__item__content {
+    background-color: white;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    height: 0;
+}
+
+.collapse-bar__item__content.expanded {
+    transform: scaleY(1);
+    background-color: $dark;
+    height: auto;
 }

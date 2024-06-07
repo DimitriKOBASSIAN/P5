@@ -130,17 +130,21 @@ $white: #ffffff;
         align-items: flex-end;
         list-style-type: none;
     }
-
-    .collapse-bar__item {
-        margin: 20px 20px;
+/*     .collapse-bar__item{
+        margin: 0 20px;
         background-color: $dark;
         width: 100%;
         padding : 0 20px;
     }
+
     .collapse-bar__item__content{
         display: flex;
         flex-direction: column;
         width: 100%;
+
+    } */
+
+
 
     
         ul {
@@ -152,4 +156,3 @@ $white: #ffffff;
             padding: none;
         }
     }
-}

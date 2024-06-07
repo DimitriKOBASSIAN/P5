@@ -5,15 +5,16 @@
     width: 100%;
     overflow: hidden;
     border-radius: 15px;
+    
 
     }
     .carousel__btn {
     position: absolute;
     top: 50%;
+    height: 100%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
-    font-size: 1.5rem;
     border: none;
     padding: 1rem;
     cursor: pointer;
@@ -21,7 +22,7 @@
     transition: background-color 0.3s;
   }
   .carousel__btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.1);
   }
   .carousel__btn--prev {
     left: 0;
@@ -34,4 +35,10 @@
     height: 415px;
     object-fit: cover;
     display: block;
+  }
+
+  .chevron-carousel {
+    width: 80px;
+    height: 80px;
+    fill: white;
   }
