@@ -17,17 +17,22 @@ const Carousel = ({ images }) => {
     };
     return (
         <div className="carousel">
-            <button onClick={prevSlide} className="carousel__btn carousel__btn--prev">
-                <ChevronLeft className="chevron-carousel" />
-            </button>
+            {images.length > 1 && (
+                <>
+                    <button onClick={prevSlide} className="carousel__btn carousel__btn--prev">
+                        <ChevronLeft className="chevron-carousel" />
+                    </button>
+                    <button onClick={nextSlide} className="carousel__btn carousel__btn--next">
+                        <ChevronRight className="chevron-carousel" />
+                    </button>
+                    <p className="carousel__counter">{`${activeIndex + 1}/${images.length}`}</p>
+                </>
+            )}
             <img
                 src={images[activeIndex]}
                 alt={`Slide ${activeIndex}`}
                 className="carousel__img"
             />
-            <button onClick={nextSlide} className="carousel__btn carousel__btn--next">
-                <ChevronRight className="chevron-carousel" />
-            </button>
         </div>
     );
 };

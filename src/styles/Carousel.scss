@@ -1,4 +1,6 @@
 
+$kasa-font: 'Montserrat', sans-serif;
+
 .carousel {
     position: relative;
     max-width: 100%;
@@ -7,8 +9,8 @@
     border-radius: 15px;
     
 
-    }
-    .carousel__btn {
+    
+    &__btn {
     position: absolute;
     top: 50%;
     height: 100%;
@@ -21,21 +23,33 @@
     z-index: 1;
     transition: background-color 0.3s;
   }
-  .carousel__btn:hover {
+  &__btn:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
-  .carousel__btn--prev {
+  &__btn--prev {
     left: 0;
   }
-  .carousel__btn--next {
+  &__btn--next {
     right: 0;
   }
-  .carousel__img {
+  &__img {
     width: 100%;
     height: 415px;
     object-fit: cover;
     display: block;
   }
+&__counter {
+  font-family: $kasa-font;
+  font-size: 18px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  }
+}
 
   .chevron-carousel {
     width: 80px;
