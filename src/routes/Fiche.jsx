@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, redirect } from "react-router-dom";
 import HouseData from "../data/logements.json";
 import Loader from "../components/Loader";
 import CollapseBar from "../components/CollapseBar";
 import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
+import Error from "../routes/Error";    
 import "../styles/Fiche.scss";
 
 
@@ -12,6 +13,7 @@ const Fiche = () => {
     const [logement, setLogement] = useState(null);
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         const foundLogement = HouseData.find(logement => logement.id == id);
@@ -66,7 +68,7 @@ const Fiche = () => {
                 </div>
             </div>
         ) : (
-            <p>Logement non trouvé</p>
+            <Error />
         )}
         </>
     );
