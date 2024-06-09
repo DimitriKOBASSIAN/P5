@@ -68,6 +68,13 @@ $dark: #f6f6f6;
         line-height: 1.2;
         margin: 0;
     }
+
+    &__text {
+        font-family: $kasa-font;
+        font-size: 18px;
+        font-weight: 400;
+        color: $kasa-black;
+    }
     
 }
 
@@ -102,4 +109,5 @@ $dark: #f6f6f6;
     transform: scaleY(1);
     background-color: $dark;
     height: auto;
+    border-radius: 0 0 5px 5px;
 }

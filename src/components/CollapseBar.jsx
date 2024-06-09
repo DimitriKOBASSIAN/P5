@@ -33,7 +33,7 @@ function Collapsebar({ list }) {
                         </h2>
                     </div>
                         <div className={`collapse-bar__item__content ${activeIndices.includes(index) ? 'expanded' : ''}`}>
-                        <p>{item.content}</p>
+                        <div className="collapse-bar__text">{item.content}</div>
                     </div>
                 </div>
             ))}

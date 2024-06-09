@@ -40,7 +40,6 @@ $kasa-font: "Montserrat", sans-serif;
         font-size: 1.5em;
         font-weight: 500;
         text-decoration: none;
-        
         width: 120px;
 
         font-family: $kasa-font;
@@ -49,9 +48,6 @@ $kasa-font: "Montserrat", sans-serif;
             color: $kasa-pink;
         }
 
-        &.active {
-            text-decoration: underline;
-        }
     }
 
     &--nav ul {
@@ -64,7 +60,7 @@ $kasa-font: "Montserrat", sans-serif;
         align-items: center;
     }
 
-    &--active {
+    .NavBar--active {
         text-decoration: underline;
     }
 }
