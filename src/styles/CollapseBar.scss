@@ -76,6 +76,24 @@ $dark: #f6f6f6;
         color: $kasa-black;
     }
     
+    &__item__content {
+        background-color: white;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.2s ease-in-out;
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        height: 0;
+    }
+    
+    &__item__content.expanded {
+        transform: scaleY(1);
+        background-color: $dark;
+        height: auto;
+        border-radius: 0 0 5px 5px;
+    }
 }
 
 .rotate {
@@ -91,23 +109,4 @@ $dark: #f6f6f6;
 
 .rotate {
     transform: rotate(180deg);
-}
-
-.collapse-bar__item__content {
-    background-color: white;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.2s ease-in-out;
-    overflow: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 20px;
-    height: 0;
-}
-
-.collapse-bar__item__content.expanded {
-    transform: scaleY(1);
-    background-color: $dark;
-    height: auto;
-    border-radius: 0 0 5px 5px;
 }
