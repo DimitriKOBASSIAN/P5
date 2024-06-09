@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import HouseData from "../data/logements.json";
-import Loader from "../components/Loader";
 import CollapseBar from "../components/CollapseBar";
 import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
@@ -11,18 +10,12 @@ import "../styles/Fiche.scss";
 
 const Fiche = () => {
     const [logement, setLogement] = useState(null);
-    const [loading, setLoading] = useState(true);
     const { id } = useParams();
 
     useEffect(() => {
         const foundLogement = HouseData.find(logement => logement.id === id);
         setLogement(foundLogement);
-        setLoading(false);
     }, [id]);
-
-    if (loading) {
-        return <Loader />;
-    }
 
     return (
         <>

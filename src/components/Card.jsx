@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../data/logements.json";
-import Loader from "./Loader";
 import "../styles/Card.scss";
 
 const Card = () => {
@@ -20,7 +19,6 @@ const Card = () => {
     return (
         <>
         <section className="container">
-            {data ? (
                 <>
                 {data.slice(0, numCardsToShow).map((data) => (
                     <figure key={data.id} className="container_card">
@@ -37,9 +35,6 @@ const Card = () => {
                     </figure>
                 ))}
                 </> 
-            ) : (
-                <Loader />
-            )}
         </section>
         <section >
             {data.length > numCardsToShow && (
