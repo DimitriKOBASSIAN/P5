@@ -10,14 +10,14 @@ $white: #ffffff;
     grid-auto-rows: 340px;
     grid-auto-columns: 340px;
     gap: 50px;
-    width: 45%;
+    width: min(1140px, 100%);
     height: 50%;
     background: $dark;
     border-radius: 25px;
-    padding: 50px 50px 50px 50px;
-    margin: 0 auto 0 auto;
+    padding: 50px 50px 50px 50px;;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 
     .container_card {
         position: relative;

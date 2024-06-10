@@ -1,13 +1,13 @@
 .Banner {
     display: grid;
     place-items: center;
-    width: min(1240px, 90%);
+    width: min(1240px, 100%);
     min-height: 223px;
-    margin: auto;
+    margin: 0 auto 43px auto;
     border-radius: 25px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     color: white;
-    margin-bottom: 43px;
+
     position: relative;
 
     &:before {
