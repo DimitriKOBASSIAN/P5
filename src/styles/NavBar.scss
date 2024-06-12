@@ -34,14 +34,12 @@ $kasa-font: "Montserrat", sans-serif;
         align-items: center;
         gap: 20px;
         color: $kasa-black;
-        font-size: 16px;
         display: flex;
         align-items: flex-end;
         font-size: 1.5em;
         font-weight: 500;
         text-decoration: none;
         width: 120px;
-
         font-family: $kasa-font;
 
         &:hover {
@@ -51,7 +49,7 @@ $kasa-font: "Montserrat", sans-serif;
     }
 
     &--nav ul {
-        display: inline-block;
+        display: inline-flex;
         gap: 10px;
     }
 
@@ -63,4 +61,85 @@ $kasa-font: "Montserrat", sans-serif;
     .NavBar--active {
         text-decoration: underline;
     }
+}
+
+@media (max-width: 1024px) {
+    .NavBar {
+        width: min(1140px, 80%);
+        margin: 30px auto 20px auto;
+        padding: 0 auto;
+}
+}
+
+@media (max-width: 768px) {
+    .NavBar {
+        width: min(1140px, 80%);
+        margin: 30px auto 20px auto;
+        padding: 0 auto;
+}
+}
+@media (max-width: 425px) {
+    .NavBar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 30px auto 20px auto;
+        padding: 0 30px;
+
+        &--logo {
+            width: 145px;
+            height: 100%;
+        }
+
+        &--nav ul {
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        a {
+            font-size: 1em;
+            width: auto;
+            text-transform: uppercase;
+            padding: 0;
+        }
+}
+
+    .body {
+        padding: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .NavBar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin: 30px auto 20px auto;
+        padding: 0 30px;
+
+        &--logo {
+            width: 145px;
+            height: 50%;
+        }
+
+        &--nav ul {
+            display: flex;
+            gap: 5px;
+            flex-wrap: nowrap;
+            padding-left: 0;
+        }
+
+        a {
+            font-size: 0.8em;
+            width: auto;        }
+}
 }
