@@ -115,6 +115,7 @@ $dark: #f6f6f6;
 @media screen and (max-width: 1024px) {
     .collapse-bar {
         width: 75%;
+        height: auto;
 
         &__item {
             font-size: 20px;
@@ -125,10 +126,10 @@ $dark: #f6f6f6;
 @media screen and (max-width: 425px) {
     .collapse-bar {
         width: 80%;
+        margin-bottom: 0;
 
         &__item {
             font-size: 12px;
-            margin: 0px 10px 10px 0;
             padding: 0;
         }
 

@@ -42,12 +42,7 @@ const Fiche = () => {
                 </div>
                 <div className="fiche--infos">
                 <CollapseBar className="fiche--description" list={[{ title: 'Description', content: logement.description }]} />
-                <CollapseBar 
-                    className="fiche--equipements" 
-                    list={[
-                        { 
-                            title: 'Equipements', 
-                            content: (
+                <CollapseBar className="fiche--equipements" list={[{ title: 'Equipements',  content: (
                                 <ul>
                                     {logement.equipments.map((equipment, index) => (
                                         <li key={index}>{equipment}</li>
