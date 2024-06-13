@@ -128,12 +128,21 @@ $dark: #f6f6f6;
 
         &__item {
             font-size: 12px;
-            margin: 0px 10px 0;
+            margin: 0px 10px 10px 0;
             padding: 0;
         }
 
         &__text {
             font-size: 12px;
+            margin-bottom: 1px;
+        }
+        &__item__content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        &__item__content.expanded {
+            max-height: 1000px; // Modify this line
         }
 
         h2  {
@@ -142,6 +151,3 @@ $dark: #f6f6f6;
     }
 }
 
-.collapseBar.expanded {
-    max-height: 500px;
-}
