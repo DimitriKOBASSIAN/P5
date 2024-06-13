@@ -56,3 +56,37 @@ $kasa-font: 'Montserrat', sans-serif;
     height: 80px;
     fill: white;
   }
+
+@media screen and (max-width: 425px){
+  .carousel {
+
+    width: fit-content;
+    height: auto;
+    max-height: 335px;
+    max-width: 400px;
+    object-fit: cover;
+    margin: 0 10px;
+
+    &__img {
+      max-width: fit-content;
+      max-height: 335px;
+      object-fit: cover;
+    }
+
+  &__btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &__btn--prev {
+    left: 0;
+  }
+  &__btn--next {
+    right: 0;
+  }
+}
+
+  .chevron-carousel {
+    width: 40px;
+    height: 40px;
+    fill: white;
+  }
+}

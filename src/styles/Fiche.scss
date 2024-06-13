@@ -24,9 +24,13 @@ $white: #ffffff;
     &--header {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        grid-template-areas:
+            "title host" 
+            "tags rating";
     }
 
     &--geo {
@@ -38,6 +42,7 @@ $white: #ffffff;
     }
 
     &--host {
+        grid-area: host;
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-start;
@@ -46,6 +51,7 @@ $white: #ffffff;
     }
 
     &--title {
+        grid-area: title;
         color :$kasa-pink;
         font-family: $kasa-font;
         font-size: 36px;
@@ -82,6 +88,7 @@ $white: #ffffff;
     }
 
     &--tags {
+        grid-area: tags;
         display: flex;
         justify-content: flex-start;
         width: 100%;
@@ -102,6 +109,7 @@ $white: #ffffff;
     }
 
     &--rate {
+        grid-area: rating;
         display: inline-flex;
         justify-content: flex-end;
     }
@@ -152,3 +160,128 @@ $white: #ffffff;
         }
         
     }
+
+@media screen and (max-width: 425px) {
+
+    .fiche {
+        display: grid;
+        width: max(300px, 100%);
+        margin: 10px 10px 10px 10px;
+        border-radius: 25px;
+        color: black;
+        margin-bottom: 43px;
+        position: relative;
+    
+        &--carousel {
+            border-radius: 15px;
+            max-width: 425px;
+            height: auto;
+        }
+    
+        &--header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-content: space-between;
+            align-items: center;
+            width: max(415px,100%);
+            grid-template-areas:
+            "title title" 
+            "tags tags" 
+            "rating host";
+        }
+    
+        &--geo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+        }
+    
+        &--host {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+        }
+    
+        &--title {
+            font-size: 18px;
+        }
+    
+        &--location {
+            font-size: 14px;
+        }
+    
+        &--host-photo {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    
+        &--hostname { 
+            color: $kasa-pink;
+            font-family: $kasa-font;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: right;
+            padding-right: 20px;
+            white-space: pre-wrap;
+        }
+    
+        &--tags {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+        }
+    
+        &--tag {
+            background-color: $kasa-pink;
+            color: $white;
+            font-family: $kasa-font;
+            text-align: center;
+            width: auto;
+            height: auto;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+    
+        &--rate {
+            display: inline-flex;
+            justify-content: flex-start;
+        }
+    
+        &--infos {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 30px;
+            box-sizing: border-box;
+            }
+    
+        &--description {
+            display: flex;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: left;
+            padding: 20px;
+            margin-top: 0;
+            box-sizing: border-box;
+            background-color: #f6f6f6;
+        }
+    
+        &--equipements {
+            display: flex;
+            align-items: flex-end;
+            list-style-type: none;
+        }
+    
+}
+}

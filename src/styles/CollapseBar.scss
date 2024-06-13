@@ -13,6 +13,7 @@ $dark: #f6f6f6;
     user-select: none;
     font-family: $kasa-font;
     width: 45%;
+    margin-bottom: 20px;
 
     &__item {
         display: flex;
@@ -109,4 +110,30 @@ $dark: #f6f6f6;
 
 .rotate {
     transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1024px) {
+    .collapse-bar {
+        width: 75%;
+
+        &__item {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .collapse-bar {
+        width: 75%;
+
+        &__item {
+            font-size: 12px;
+            margin: 0px 0;
+            padding: 0;
+        }
+
+        h2  {
+            font-size: 12px;
+        }
+    }
 }

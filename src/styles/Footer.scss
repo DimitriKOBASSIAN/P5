@@ -21,7 +21,8 @@ $kasa-white: #FFFFFF;
         gap: 30px;
         bottom: 0;
         padding: 66px 0;
-    
+        position: relative;
+
         &--logo {
         margin-top: 20px;
         width: 122px;
@@ -33,4 +34,28 @@ $kasa-white: #FFFFFF;
         font-weight: 500;
         color: $kasa-white;
         }
+    }
+
+    @media (max-width: 1024px) {
+        .footer {
+            height: 159px;
+            width: 100%;
+            padding: auto 0;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .footer {
+            height: 159px;
+            padding: auto 0;
+            width: 100%;
+
+            &--text {
+                font-size: 12px;
+                font-weight: 500;
+                color: $kasa-white;
+                }
+        }
+
+
     }

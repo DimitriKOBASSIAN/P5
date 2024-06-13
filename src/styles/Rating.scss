@@ -11,3 +11,12 @@
 .star--inactive {
     fill: #E3E3E3;
 }
+
+@media screen and (max-width: 425px){
+    .star--active, .star--inactive {
+        width: 18px;
+        height: 18px;
+        padding:  0 3px
+    }
+    
+}
