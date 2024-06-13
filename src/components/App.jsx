@@ -8,6 +8,7 @@ import Footer from './Footer';
 import NavBar from './NavBar';
 import '../styles/App.scss';
 
+/* basic import for routes, managing errors is the URL is unknown */
 function App() {
     return (
         <Router>
