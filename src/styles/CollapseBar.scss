@@ -124,16 +124,24 @@ $dark: #f6f6f6;
 
 @media screen and (max-width: 425px) {
     .collapse-bar {
-        width: 75%;
+        width: 80%;
 
         &__item {
             font-size: 12px;
-            margin: 0px 0;
+            margin: 0px 10px 0;
             padding: 0;
         }
 
-        h2  {
+        &__text {
             font-size: 12px;
         }
+
+        h2  {
+            font-size: 13px;
+        }
     }
+}
+
+.collapseBar.expanded {
+    max-height: 500px;
 }
