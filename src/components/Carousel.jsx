@@ -3,6 +3,7 @@ import '../styles/Carousel.scss';
 import { ReactComponent as ChevronLeft } from '../assets/icons/chevron-left-solid.svg';
 import { ReactComponent as ChevronRight } from '../assets/icons/chevron-right-solid.svg';
 
+/* Creating a function to display images in a carousel. Taking count of looping in the carousel if we are on the last image or the first image. */
 const Carousel = ({ images }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const nextSlide = () => {
