@@ -1,0 +1,22 @@
+$kasa-black: #000000;
+$kasa-pink: #FF6060;
+$kasa-font: 'Montserrat', sans-serif;
+$dark: #f6f6f6;
+$white: #ffffff;
+
+body {
+  margin: 0 auto;
+  min-height: 100vh;;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $kasa-font;
+  padding: 0;
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+  box-sizing: border-box;
+}
+}

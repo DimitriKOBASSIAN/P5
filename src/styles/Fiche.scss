@@ -1,0 +1,302 @@
+$kasa-black: #000000;
+$kasa-pink: #FF6060;
+$kasa-font: 'Montserrat', sans-serif;
+$dark: #f6f6f6;
+$white: #ffffff;
+
+.fiche {
+    display: grid;
+    place-items: center;
+    width: min(1240px, 90%);
+    margin: auto;
+    border-radius: 25px;
+    color: black;
+    margin-bottom: 43px;
+    position: relative;
+
+    &--carousel {
+        border-radius: 15px;
+        height: 415px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &--header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        grid-template-areas:
+            "title host" 
+            "tags rating";
+    }
+
+    &--geo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    &--host {
+        grid-area: host;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+    }
+
+    &--title {
+        grid-area: title;
+        color :$kasa-pink;
+        font-family: $kasa-font;
+        font-size: 36px;
+        font-weight: 500;
+        text-align: flex-start;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+
+    &--location {
+        color: $kasa-black;
+        font-family: $kasa-font;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    &--host-photo {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &--hostname { 
+        color: $kasa-pink;
+        font-family: $kasa-font;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: right;
+        padding-right: 20px;
+        white-space: pre-wrap;
+    }
+
+    &--tags {
+        grid-area: tags;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    &--tag {
+        background-color: $kasa-pink;
+        color: $white;
+        font-family: $kasa-font;
+        text-align: center;
+        width: auto;
+        height: auto;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+
+    &--rate {
+        grid-area: rating;
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+
+    &--infos {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 30px;
+        box-sizing: border-box;
+        }
+
+    &--description {
+        display: flex;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        padding: 20px;
+        margin-top: 0;
+        box-sizing: border-box;
+        background-color: #f6f6f6;
+    }
+
+    &--equipements {
+        display: flex;
+        align-items: flex-end;
+        list-style-type: none;
+    }
+
+    
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 0;
+            margin: 0
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: none
+        }
+
+        p {
+            padding: none;
+        }
+        
+    }
+
+@media screen and (max-width: 425px) {
+
+    .fiche {
+        display: grid;
+        height: auto;
+        width: max(300px, 100%);
+        margin: 10px 10px 10px 10px;
+        border-radius: 25px;
+        color: black;
+        position: relative;
+    
+        &--carousel {
+            border-radius: 15px;
+            max-width: 425px;
+            height: auto;
+        }
+    
+        &--header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            justify-content: space-between;
+            align-items: center;
+            width: max(415px,100%);
+            margin: 0 10px;
+            grid-template-areas:
+            "geo geo" 
+            "tags tags" 
+            "rating host";
+        }
+    
+        &--geo {
+            grid-area: geo;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            margin-top: 10px;
+        }
+    
+        &--title {
+            grid-row: 1 / 3;
+            font-size: 18px;
+            white-space: normal;
+            margin-top: 0;
+            padding: 0 0 10px 30px
+        }
+    
+        &--location {
+            font-size: 14px;
+            padding: 0 0 10px 30px
+        }
+    
+        &--host {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 30px 0 0;
+        }
+
+        &--host-photo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        &--hostname { 
+            color: $kasa-pink;
+            font-family: $kasa-font;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: right;
+            padding-right: 10px;
+            white-space: pre-wrap;
+        }
+    
+        &--tags {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 0 0 10px 30px
+        }
+    
+        &--tag {
+            background-color: $kasa-pink;
+            color: $white;
+            font-family: $kasa-font;
+            text-align: center;
+            width: auto;
+            height: auto;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+    
+        &--rate {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 0 10px 30px
+        }
+    
+        &--infos {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            margin-top: 0
+            }
+    
+        &--description {
+            display: flex;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: left;
+            padding: 20px;
+            margin-top: 0;
+            box-sizing: border-box;
+            background-color: #f6f6f6;
+        }
+    
+        &--equipements {
+            display: flex;
+            align-items: flex-end;
+            list-style-type: none;
+        }
+
+        
+    
+}
+}
