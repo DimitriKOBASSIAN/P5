@@ -8,6 +8,7 @@ $white: #ffffff;
     display: grid;
     place-items: center;
     width: min(1240px, 90%);
+    height: auto;
     margin: auto;
     border-radius: 25px;
     color: black;
@@ -47,7 +48,6 @@ $white: #ffffff;
         flex-direction: row-reverse;
         justify-content: flex-start;
         align-items: center;
-        padding: 20px;
     }
 
     &--title {
@@ -120,6 +120,7 @@ $white: #ffffff;
         width: 100%;
         margin-top: 30px;
         box-sizing: border-box;
+        height: auto;
         }
 
     &--description {
@@ -161,7 +162,7 @@ $white: #ffffff;
         
     }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
 
     .fiche {
         display: grid;
@@ -184,7 +185,6 @@ $white: #ffffff;
             grid-template-rows: auto auto auto;
             justify-content: space-between;
             align-items: center;
-            width: max(415px,100%);
             margin: 0 10px;
             grid-template-areas:
             "geo geo" 
@@ -220,12 +220,11 @@ $white: #ffffff;
             flex-direction: row-reverse;
             justify-content: flex-start;
             align-items: center;
-            padding: 0 30px 0 0;
         }
 
         &--host-photo {
-            width: 32px;
-            height: 32px;
+            width: 64x;
+            height: 64px;
             border-radius: 50%;
             object-fit: cover;
         }
@@ -243,8 +242,8 @@ $white: #ffffff;
         &--tags {
             display: flex;
             justify-content: flex-start;
-            width: 100%;
-            padding: 0 0 10px 30px
+            width: auto;
+            padding: 0 0 10px 25px
         }
     
         &--tag {
@@ -298,5 +297,18 @@ $white: #ffffff;
 
         
     
+}
+}
+
+@media screen and (max-width: 425px) {
+
+    .fiche {
+        
+        &--host-photo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
 }
 }
