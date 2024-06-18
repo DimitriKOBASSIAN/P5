@@ -23,7 +23,7 @@ function Collapsebar({ list }) {
                     >
                         <h2>
                             {item.title}
-                            <span style={{ display: 'inline-block', width: '24px', height: '24px' }}>
+                            <span>
                                 {activeIndices.includes(index) ? (
                                     <ChevronDown className="chevron " />
                                 ) : (
