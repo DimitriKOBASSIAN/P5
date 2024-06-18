@@ -39,3 +39,16 @@ a {
 }
 
 }
+
+@media screen and (max-width: 900px){
+    #error-page {
+    h1 {
+        font-size: 98px;
+        margin: 100px 0 100px 0;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+}
