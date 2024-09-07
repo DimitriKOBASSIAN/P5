@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a53ef1ca.css",
+    "main.js": "/static/js/main.b26f2ed8.js",
+    "static/media/Mountain.png": "/static/media/Mountain.640955dab8c7bff25514.png",
+    "static/media/Coast.png": "/static/media/Coast.19221376a0aa2549c135.png",
+    "static/media/LOGO.svg": "/static/media/LOGO.69a3df082e3c5a974ce0abfe5dc4be4e.svg",
+    "static/media/LOGO-BW.svg": "/static/media/LOGO-BW.49d6c6c773443de2f700868f876ad8db.svg",
+    "index.html": "/index.html",
+    "static/media/star-solid.svg": "/static/media/star-solid.ad1ccc13f86ea075be58f8d5b88072b3.svg",
+    "static/media/chevron-down-solid.svg": "/static/media/chevron-down-solid.0fbf4154669ccc4068fd5bb7e36392d6.svg",
+    "static/media/chevron-right-solid.svg": "/static/media/chevron-right-solid.0849714052afd54cdb917030cae03a01.svg",
+    "static/media/chevron-left-solid.svg": "/static/media/chevron-left-solid.1667b5267d32fb42fc974ca50563cc53.svg",
+    "main.a53ef1ca.css.map": "/static/css/main.a53ef1ca.css.map",
+    "main.b26f2ed8.js.map": "/static/js/main.b26f2ed8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a53ef1ca.css",
+    "static/js/main.b26f2ed8.js"
+  ]
+}
